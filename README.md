@@ -263,8 +263,7 @@ GOLD_DIGGER/
 
 ## 👤 Author
 
-Built as a hands-on SQL practice project — part of ongoing prep for a data analyst role (Python + SQL focus).
-
+RUDHIYANSH
 ---
 
 ## 📄 License
