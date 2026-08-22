@@ -2,6 +2,10 @@
 
 A relational database project simulating a simple e-commerce system — customers, orders, products, and order details — built to practice core SQL concepts: schema design, CRUD operations, joins, aggregate functions, and foreign key relationships.
 
+![Sample query output preview](screenshots/01_all_customers.png)
+
+*(More query outputs in the [Sample Queries & Output](#-sample-queries--output) section below.)*
+
 ---
 
 ## 📋 Table of Contents
