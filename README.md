@@ -18,8 +18,6 @@ A relational database project simulating a simple e-commerce system — customer
 - [Features & Operations Covered](#-features--operations-covered)
 - [Sample Queries & Output](#-sample-queries--output)
 - [Assumptions Made](#-assumptions-made)
-- [Known Limitations / Notes](#-known-limitations--notes)
-- [Possible Enhancements](#-possible-enhancements)
 - [Project Structure](#-project-structure)
 - [Author](#-author)
 - [License](#-license)
@@ -28,7 +26,7 @@ A relational database project simulating a simple e-commerce system — customer
 
 ## 📖 Overview
 
-**DATA_DIGGER** is a hands-on SQL project built for the **Red & White Skill Education** SQL exam brief (project titled "Data Digger" in the assignment). It creates a MySQL database named `GOLD_DIGGER` that models four related tables of a basic online store:
+**DATA_DIGGER** is a hands-on SQL project built for the **Red & White Skill Education** SQL exam brief (project titled "Data Digger" in the assignment). It creates a MySQL database named `DATA_DIGGER` that models four related tables of a basic online store:
 
 | Table | Purpose |
 |---|---|
@@ -223,17 +221,6 @@ As instructed in the exam brief, here are the assumptions made while completing 
 - **Delete order matters:** Deletes (e.g. removing out-of-stock products, removing a customer) are executed in an order that assumes no dependent child rows exist yet in `OrderDetails` at that point in the script — this avoids foreign key violations without needing `ON DELETE CASCADE`, which wasn't part of the brief.
 - **Duplicate names allowed:** `Name` in `Customers` is not set as unique, since two customers legitimately named "Alice" are used intentionally to demonstrate the "display all customers named X" query on a non-unique column.
 - **"Last 30 days" is relative to the current date** the query is run (`CURDATE()`), not a fixed date — so results will differ depending on when the script is executed relative to the sample order dates.
-
----
-
-## 🔮 Possible Enhancements
-
-- Add an `Orders → Customers` foreign key for stricter referential integrity
-- Add `ON DELETE CASCADE` / `ON DELETE SET NULL` policies for safer deletes
-- Add a `Categories` table and link it to `Products`
-- Add indexes on frequently filtered columns (`Email`, `OrderDate`)
-- Wrap common reports (top products, revenue by month) into `VIEW`s or stored procedures
-- Connect the database to a small Python (pandas / SQLAlchemy) script to turn this into a mini analytics dashboard
 
 ---
 
