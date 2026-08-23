@@ -1,6 +1,8 @@
-# 🪙 GOLD_DIGGER — E-Commerce SQL Database Project
+# 🪙 DATA_DIGGER — E-Commerce SQL Database Project
 
 A relational database project simulating a simple e-commerce system — customers, orders, products, and order details — built to practice core SQL concepts: schema design, CRUD operations, joins, aggregate functions, and foreign key relationships.
+
+![Sample query output preview](screenshots/01_all_customers.png)
 
 *(More query outputs in the [Sample Queries & Output](#-sample-queries--output) section below.)*
 
@@ -26,7 +28,7 @@ A relational database project simulating a simple e-commerce system — customer
 
 ## 📖 Overview
 
-**GOLD_DIGGER** (a.k.a. "Data Digger") is a hands-on SQL project built for the **Red & White Skill Education** SQL exam brief. It models four related tables of a basic online store:
+**DATA_DIGGER** is a hands-on SQL project built for the **Red & White Skill Education** SQL exam brief (project titled "Data Digger" in the assignment). It creates a MySQL database named `GOLD_DIGGER` that models four related tables of a basic online store:
 
 | Table | Purpose |
 |---|---|
@@ -138,14 +140,14 @@ The project demonstrates:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/rudhiyansh/GOLD_DIGGER.git
-   cd GOLD_DIGGER
+   git clone https://github.com/rudhiyansh/DATA_DIGGER.git
+   cd DATA_DIGGER
    ```
 
 2. **Open the SQL file**
-   Open `GOLD_DIGGER.sql` in MySQL Workbench (or run it via CLI):
+   Open `DATA_DIGGER.sql` in MySQL Workbench (or run it via CLI):
    ```bash
-   mysql -u root -p < GOLD_DIGGER.sql
+   mysql -u root -p < DATA_DIGGER.sql
    ```
 
 3. **Run it top to bottom**
@@ -224,13 +226,6 @@ As instructed in the exam brief, here are the assumptions made while completing 
 
 ---
 
-## ⚠️ Known Limitations / Notes
-
-- **`Orders.CustomerID` has no `FOREIGN KEY` constraint** (see assumptions above), so it's technically possible to insert an order for a customer that doesn't exist or was deleted. This mirrors the original schema brief and wasn't a strict requirement.
-- If you delete a product or customer **after** related `OrderDetails`/`Orders` rows exist, MySQL will raise a foreign key constraint error — run deletes in the same order the script does, or add `ON DELETE CASCADE` if you extend this project.
-
----
-
 ## 🔮 Possible Enhancements
 
 - Add an `Orders → Customers` foreign key for stricter referential integrity
@@ -245,9 +240,9 @@ As instructed in the exam brief, here are the assumptions made while completing 
 ## 📁 Project Structure
 
 ```
-GOLD_DIGGER/
+DATA_DIGGER/
 │
-├── GOLD_DIGGER.sql     # Full schema + sample data + queries
+├── DATA_DIGGER.sql     # Full schema + sample data + queries
 ├── README.md           # Project documentation (this file)
 └── screenshots/        # Query output screenshots referenced in this README
     ├── 01_all_customers.png
@@ -263,7 +258,8 @@ GOLD_DIGGER/
 
 ## 👤 Author
 
-RUDHIYANSH
+Rudhiyansh
+
 ---
 
 ## 📄 License
